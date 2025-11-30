@@ -218,8 +218,8 @@ const MONETARY_EQUIVALENTS = {
   'тетрадрахма': { workDays: 4, modernValue: 180, currency: 'долларов', metal: 'серебро' },
   'статир': { workDays: 4, modernValue: 180, currency: 'долларов', metal: 'серебро' },
   'дарик': { workDays: 20, modernValue: 1000, currency: 'долларов', metal: 'золото' },
-  'мина греческая': { workDays: 100, modernValue: 5000, currency: 'долларов', metal: 'серебро' },
-  'талант греческий': { workDays: 7300, modernValue: 365000, currency: 'долларов', metal: 'серебро' },
+  'мина греческая': { workDays: 100, modernValue: 4500, currency: 'долларов', metal: 'серебро' },
+  'талант греческий': { workDays: 6000, modernValue: 270000, currency: 'долларов', metal: 'серебро' },
 
   // English
   'shekel': { workDays: 0.5, modernValue: 25, currency: 'dollars', metal: 'silver' },
@@ -231,8 +231,8 @@ const MONETARY_EQUIVALENTS = {
   'tetradrachma': { workDays: 4, modernValue: 180, currency: 'dollars', metal: 'silver' },
   'stater': { workDays: 4, modernValue: 180, currency: 'dollars', metal: 'silver' },
   'daric': { workDays: 20, modernValue: 1000, currency: 'dollars', metal: 'gold' },
-  'greek mina': { workDays: 100, modernValue: 5000, currency: 'dollars', metal: 'silver' },
-  'greek talent': { workDays: 7300, modernValue: 365000, currency: 'dollars', metal: 'silver' },
+  'greek mina': { workDays: 100, modernValue: 4500, currency: 'dollars', metal: 'silver' },
+  'greek talent': { workDays: 6000, modernValue: 270000, currency: 'dollars', metal: 'silver' },
 
   // Spanish
   'siclo': { workDays: 0.5, modernValue: 25, currency: 'dólares', metal: 'plata' },
@@ -439,7 +439,10 @@ const InterfaceStrings = {
     menuConvert: 'Конвертировать',
     menuConvertCallout: 'Конвертировать в рамке',
     menuFindAndConvert: 'Найти и конвертировать',
-    menuMonthInfo: 'Информация о месяце'
+    menuMonthInfo: 'Информация о месяце',
+
+    // Callout text
+    calloutUnitsTitle: 'Единицы измерения'
   },
 
   English: {
@@ -472,7 +475,10 @@ const InterfaceStrings = {
     menuConvert: 'Convert',
     menuConvertCallout: 'Convert in Callout',
     menuFindAndConvert: 'Find and Convert',
-    menuMonthInfo: 'Month Information'
+    menuMonthInfo: 'Month Information',
+
+    // Callout text
+    calloutUnitsTitle: 'Units of Measurement'
   },
 
   Spanish: {
@@ -505,7 +511,10 @@ const InterfaceStrings = {
     menuConvert: 'Convertir',
     menuConvertCallout: 'Convertir en Marco',
     menuFindAndConvert: 'Buscar y Convertir',
-    menuMonthInfo: 'Información del Mes'
+    menuMonthInfo: 'Información del Mes',
+
+    // Callout text
+    calloutUnitsTitle: 'Unidades de Medida'
   }
 };
 
@@ -983,7 +992,7 @@ class BiblicalUnitsConverterPlugin extends Plugin {
       case 'inline':
         return `${original} = ${convertedPart}`;
       case 'callout':
-        return `> [!convert] Единицы измерения\n> **${original} = ${convertedPart}**`;
+        return `> [!convert] ${this.Lang.calloutUnitsTitle || 'Единицы измерения'}\n> **${original} = ${convertedPart}**`;
       default:
         return `${original} (${convertedPart})`;
     }
