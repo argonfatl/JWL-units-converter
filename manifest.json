@@ -1,0 +1,11 @@
+{
+	"id": "jwl-biblical-units-converter",
+	"name": "JWL Biblical Units Converter",
+	"version": "0.1.0",
+	"minAppVersion": "1.0.0",
+	"description": "Converts biblical time measurements and units to modern equivalents. Supports ancient Hebrew and Greek measurements.",
+	"author": "Argonfatl",
+	"authorUrl": "https://github.com/argonfatl/biblical-units-converter",
+	"fundingUrl": "https://github.com/argonfatl/biblical-units-converter",
+	"isDesktopOnly": false
+}
