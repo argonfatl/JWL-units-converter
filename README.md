@@ -79,11 +79,11 @@ Biblical Units Converter helps Bible readers better understand ancient units of 
 ### Basic Conversion
 Simply type biblical units in your notes and convert them:
 
-**Input:** `1 талант серебра`
-**Output:** `1 талант серебра (34.20 кг ≈ 20 лет зарплаты ≈ 365,000 долларов (серебро))`
+**Input:** `1 talent of silver`
+**Output:** `1 talent of silver (34.20 kg ≈ 20 years salary ≈ 365,000 dollars (silver))`
 
-**Input:** `5 локтей`
-**Output:** `5 локтей (2.22 м)`
+**Input:** `5 cubits`
+**Output:** `5 cubits (2.22 m)`
 
 ### Commands
 - **Convert Selected Units** - Convert units in selected text
@@ -99,37 +99,37 @@ Right-click on selected text to access:
 - 📅 **Month Information** - Hebrew calendar details
 
 ### Output Formats
-1. **Parentheses**: `1 локоть (0.44 м)`
-2. **Inline**: `1 локоть = 0.44 м`
-3. **Replace**: `0.44 м`
+1. **Parentheses**: `1 cubit (0.44 m)`
+2. **Inline**: `1 cubit = 0.44 m`
+3. **Replace**: `0.44 m`
 4. **Callout**: 
    ```
-   > [!convert] Единицы измерения
-   > **1 локоть = 0.44 м**
+   > [!convert] Units of Measurement
+   > **1 cubit = 0.44 m**
    ```
 
 ### Hebrew Calendar
 Convert Hebrew month names to get detailed information:
 
-**Input:** `нисан`
+**Input:** `nisan`
 **Output:**
 ```
-> [!convert] Месяц - НИСАН (АВИВ) - (март — апрель)
-> **В этом месяце**
-> **14** Пасха
-> **15—21** Праздник пресного хлеба
-> **16** Принесение первых плодов
-> **Условия**
-> Иордан разливается от дождей. Таяние снега
-> **Урожай/Деятельность**
-> Ячмень
+> [!convert] Month - NISAN (ABIB) - (March—April)
+> **Events**
+> **14** Passover
+> **15-21** Unleavened Bread
+> **16** Offering of firstfruits
+> **Weather**
+> Jordan swells from rains, melting snow
+> **Crops/Activity**
+> Barley
 ```
 
 ## ⚙️ Settings
 
 ### Language Support
-- **Russian** (Русский) - Default
-- **English** - Full translation
+- **English** - Default
+- **Russian** (Русский) - Full translation
 - **Spanish** (Español) - Complete localization
 
 ### Conversion Options
@@ -189,7 +189,7 @@ Contributions are welcome! Please feel free to submit issues, feature requests, 
 
 ## 📚 References
 
-- [JW.ORG Biblical Units Reference](https://wol.jw.org/ru/wol/d/r2/lp-u/1001070236)
+- [JW.ORG Biblical Units Reference](https://wol.jw.org/en/wol/d/r1/lp-e/1001070236)
 - Archaeological and historical research on ancient measurements
 - Biblical scholarship on ancient economic systems
 

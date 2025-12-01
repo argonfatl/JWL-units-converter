@@ -24,7 +24,7 @@ const DEFAULT_SETTINGS = {
   outputFormat: 'parentheses', // 'parentheses', 'replace', 'inline'
   showOriginal: true,
   precision: 2,
-  interfaceLang: 'Russian',
+  interfaceLang: 'English',
   boldConvertedValues: false, // Bold formatting for converted values
   findAndConvertOutputFormat: 'parentheses', // Separate output format for find and convert
   findAndConvertBoldValues: false, // Separate bold formatting for find and convert
