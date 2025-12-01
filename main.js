@@ -440,9 +440,34 @@ const InterfaceStrings = {
     menuConvertCallout: 'Конвертировать в рамке',
     menuFindAndConvert: 'Найти и конвертировать',
     menuMonthInfo: 'Информация о месяце',
-
-    // Callout text
-    calloutUnitsTitle: 'Единицы измерения'
+    calloutUnitsTitle: 'Единицы измерения',
+    formatParentheses: 'В скобках: локоть (0.44 м)',
+    formatReplace: 'Заменить: 0.44 м',
+    formatInline: 'Рядом: локоть = 0.44 м',
+    settingsBoldValues: 'Жирный шрифт для конвертированных значений',
+    settingsBoldValuesDesc: 'Выделять конвертированные значения жирным шрифтом (**значение**)',
+    settingsFindAndConvertTitle: 'Настройки для "Найти и конвертировать"',
+    settingsFindAndConvertDesc: 'Выберите какие типы единиц будут конвертироваться',
+    unitLengthSearch: 'Длина (для поиска)',
+    unitLengthSearchDesc: 'Конвертировать единицы длины при поиске',
+    unitWeightSearch: 'Вес (для поиска)',
+    unitWeightSearchDesc: 'Конвертировать единицы веса при поиске',
+    unitVolumeSearch: 'Объём (для поиска)',
+    unitVolumeSearchDesc: 'Конвертировать единицы объёма при поиске',
+    unitTimeSearch: 'Время (для поиска)',
+    unitTimeSearchDesc: 'Конвертировать единицы времени при поиске',
+    findAndConvertFormat: 'Формат вывода (для поиска)',
+    findAndConvertFormatDesc: 'Как отображать конвертированные значения',
+    findAndConvertBold: 'Жирный шрифт (для поиска)',
+    findAndConvertBoldDesc: 'Выделять значения жирным шрифтом',
+    unitLength: 'Длина',
+    unitLengthDesc: 'Конвертировать единицы длины',
+    unitWeight: 'Вес',
+    unitWeightDesc: 'Конвертировать единицы веса',
+    unitVolume: 'Объём',
+    unitVolumeDesc: 'Конвертировать единицы объёма',
+    unitTime: 'Время',
+    unitTimeDesc: 'Конвертировать единицы времени'
   },
 
   English: {
@@ -476,9 +501,34 @@ const InterfaceStrings = {
     menuConvertCallout: 'Convert in Callout',
     menuFindAndConvert: 'Find and Convert',
     menuMonthInfo: 'Month Information',
-
-    // Callout text
-    calloutUnitsTitle: 'Units of Measurement'
+    calloutUnitsTitle: 'Units of Measurement',
+    formatParentheses: 'In brackets: cubit (0.44 m)',
+    formatReplace: 'Replace: 0.44 m',
+    formatInline: 'Inline: cubit = 0.44 m',
+    settingsBoldValues: 'Bold Font for Converted Values',
+    settingsBoldValuesDesc: 'Highlight converted values with bold font (**value**)',
+    settingsFindAndConvertTitle: 'Settings for "Find and Convert"',
+    settingsFindAndConvertDesc: 'Select which unit types will be converted',
+    unitLengthSearch: 'Length (for search)',
+    unitLengthSearchDesc: 'Convert length units when searching',
+    unitWeightSearch: 'Weight (for search)',
+    unitWeightSearchDesc: 'Convert weight units when searching',
+    unitVolumeSearch: 'Volume (for search)',
+    unitVolumeSearchDesc: 'Convert volume units when searching',
+    unitTimeSearch: 'Time (for search)',
+    unitTimeSearchDesc: 'Convert time units when searching',
+    findAndConvertFormat: 'Output Format (for search)',
+    findAndConvertFormatDesc: 'How to display converted values',
+    findAndConvertBold: 'Bold Font (for search)',
+    findAndConvertBoldDesc: 'Highlight values with bold font',
+    unitLength: 'Length',
+    unitLengthDesc: 'Convert length units',
+    unitWeight: 'Weight',
+    unitWeightDesc: 'Convert weight units',
+    unitVolume: 'Volume',
+    unitVolumeDesc: 'Convert volume units',
+    unitTime: 'Time',
+    unitTimeDesc: 'Convert time units'
   },
 
   Spanish: {
@@ -486,6 +536,7 @@ const InterfaceStrings = {
     noSelection: '⚠️ No hay texto seleccionado para conversión.',
     noEditor: '⚠️ No hay editor activo.',
     conversionComplete: '✅ Conversión completada',
+    // ...
     noUnitsFound: 'ℹ️ No se encontraron unidades bíblicas en el texto seleccionado.',
     monthInfoAdded: '✅ Información del mes añadida',
     monthNotFound: 'ℹ️ Mes hebreo no encontrado en el texto seleccionado.',
@@ -512,9 +563,34 @@ const InterfaceStrings = {
     menuConvertCallout: 'Convertir en Marco',
     menuFindAndConvert: 'Buscar y Convertir',
     menuMonthInfo: 'Información del Mes',
-
-    // Callout text
-    calloutUnitsTitle: 'Unidades de Medida'
+    calloutUnitsTitle: 'Unidades de Medida',
+    formatParentheses: 'En paréntesis: codo (0.44 m)',
+    formatReplace: 'Reemplazar: 0.44 m',
+    formatInline: 'En línea: codo = 0.44 m',
+    settingsBoldValues: 'Fuente Negrita para Valores',
+    settingsBoldValuesDesc: 'Resaltar valores con fuente negrita (**valor**)',
+    settingsFindAndConvertTitle: 'Configuración para "Buscar y Convertir"',
+    settingsFindAndConvertDesc: 'Seleccionar tipos de unidades a convertir',
+    unitLengthSearch: 'Longitud (búsqueda)',
+    unitLengthSearchDesc: 'Convertir unidades de longitud',
+    unitWeightSearch: 'Peso (búsqueda)',
+    unitWeightSearchDesc: 'Convertir unidades de peso',
+    unitVolumeSearch: 'Volumen (búsqueda)',
+    unitVolumeSearchDesc: 'Convertir unidades de volumen',
+    unitTimeSearch: 'Tiempo (búsqueda)',
+    unitTimeSearchDesc: 'Convertir unidades de tiempo',
+    findAndConvertFormat: 'Formato de Salida (búsqueda)',
+    findAndConvertFormatDesc: 'Cómo mostrar valores convertidos',
+    findAndConvertBold: 'Fuente Negrita (búsqueda)',
+    findAndConvertBoldDesc: 'Resaltar valores con negrita',
+    unitLength: 'Longitud',
+    unitLengthDesc: 'Convertir unidades de longitud',
+    unitWeight: 'Peso',
+    unitWeightDesc: 'Convertir unidades de peso',
+    unitVolume: 'Volumen',
+    unitVolumeDesc: 'Convertir unidades de volumen',
+    unitTime: 'Tiempo',
+    unitTimeDesc: 'Convertir unidades de tiempo'
   }
 };
 
@@ -630,7 +706,6 @@ class BiblicalUnitsConverterPlugin extends Plugin {
   // Update interface language
   updateLanguage() {
     this.Lang = InterfaceStrings[this.settings.interfaceLang] || InterfaceStrings.Russian;
-    // Rebuild context menu with new language
     this.menu = this.buildMenu();
   }
 
@@ -1001,7 +1076,7 @@ class BiblicalUnitsConverterPlugin extends Plugin {
       case 'inline':
         return `${original} = ${convertedPart}`;
       case 'callout':
-        return `> [!convert] ${this.Lang.calloutUnitsTitle || 'Единицы измерения'}\n> **${original} = ${convertedPart}**`;
+        return `> [!convert] ${this.Lang.calloutUnitsTitle}\n> **${original} = ${convertedPart}**`;
       default:
         return `${original} (${convertedPart})`;
     }
@@ -1051,59 +1126,67 @@ class BiblicalUnitsSettingTab extends PluginSettingTab {
         .onChange(async (value) => {
           this.plugin.settings.interfaceLang = value;
           this.plugin.Lang = InterfaceStrings[value] || InterfaceStrings.Russian;
-          this.plugin.menu = this.plugin.buildMenu(); // Rebuild menu with new language
           await this.plugin.saveSettings();
           // Refresh the settings display
           this.display();
         }));
 
-    // Enabled units setting - Length
+    // Enabled units section header
+    containerEl.createEl('h3', { text: this.plugin.Lang.settingsEnabledUnits });
+    containerEl.createEl('p', {
+      text: this.plugin.Lang.settingsEnabledUnitsDesc,
+      cls: 'setting-item-description'
+    });
+
+    // Enabled units settings
     new Setting(containerEl)
-      .setName(this.plugin.Lang.settingsEnabledUnits)
-      .setDesc(this.plugin.Lang.settingsEnabledUnitsDesc)
+      .setName(this.plugin.Lang.unitLength)
+      .setDesc(this.plugin.Lang.unitLengthDesc)
       .addToggle(toggle => toggle
         .setValue(this.plugin.settings.enabledUnits.length)
         .onChange(async (value) => {
           this.plugin.settings.enabledUnits.length = value;
           await this.plugin.saveSettings();
-        }))
-      .settingEl.createEl('div', { text: 'Длина' });
+        }));
 
     new Setting(containerEl)
+      .setName(this.plugin.Lang.unitWeight)
+      .setDesc(this.plugin.Lang.unitWeightDesc)
       .addToggle(toggle => toggle
         .setValue(this.plugin.settings.enabledUnits.weight)
         .onChange(async (value) => {
           this.plugin.settings.enabledUnits.weight = value;
           await this.plugin.saveSettings();
-        }))
-      .settingEl.createEl('div', { text: 'Вес' });
+        }));
 
     new Setting(containerEl)
+      .setName(this.plugin.Lang.unitVolume)
+      .setDesc(this.plugin.Lang.unitVolumeDesc)
       .addToggle(toggle => toggle
         .setValue(this.plugin.settings.enabledUnits.volume)
         .onChange(async (value) => {
           this.plugin.settings.enabledUnits.volume = value;
           await this.plugin.saveSettings();
-        }))
-      .settingEl.createEl('div', { text: 'Объём' });
+        }));
 
     new Setting(containerEl)
+      .setName(this.plugin.Lang.unitTime)
+      .setDesc(this.plugin.Lang.unitTimeDesc)
       .addToggle(toggle => toggle
         .setValue(this.plugin.settings.enabledUnits.time)
         .onChange(async (value) => {
           this.plugin.settings.enabledUnits.time = value;
           await this.plugin.saveSettings();
-        }))
-      .settingEl.createEl('div', { text: 'Время' });
+        }));
 
     // Output format
     new Setting(containerEl)
       .setName(this.plugin.Lang.settingsOutputFormat)
       .setDesc(this.plugin.Lang.settingsOutputFormatDesc)
       .addDropdown(dropdown => dropdown
-        .addOption('parentheses', 'В скобках: локоть (0.44 м)')
-        .addOption('replace', 'Заменить: 0.44 м')
-        .addOption('inline', 'Рядом: локоть = 0.44 м')
+        .addOption('parentheses', this.plugin.Lang.formatParentheses)
+        .addOption('replace', this.plugin.Lang.formatReplace)
+        .addOption('inline', this.plugin.Lang.formatInline)
         .setValue(this.plugin.settings.outputFormat)
         .onChange(async (value) => {
           this.plugin.settings.outputFormat = value;
@@ -1136,8 +1219,8 @@ class BiblicalUnitsSettingTab extends PluginSettingTab {
 
     // Bold converted values
     new Setting(containerEl)
-      .setName('Жирный шрифт для конвертированных значений')
-      .setDesc('Выделять конвертированные значения жирным шрифтом (**значение**)')
+      .setName(this.plugin.Lang.settingsBoldValues)
+      .setDesc(this.plugin.Lang.settingsBoldValuesDesc)
       .addToggle(toggle => toggle
         .setValue(this.plugin.settings.boldConvertedValues)
         .onChange(async (value) => {
@@ -1157,16 +1240,16 @@ class BiblicalUnitsSettingTab extends PluginSettingTab {
         }));
 
     // Separator for Find and Convert settings
-    containerEl.createEl('h3', { text: 'Настройки для "Найти и конвертировать"' });
+    containerEl.createEl('h3', { text: this.plugin.Lang.settingsFindAndConvertTitle });
     containerEl.createEl('p', {
-      text: 'Выберите какие типы единиц будут конвертироваться при использовании функции "Найти и конвертировать"',
+      text: this.plugin.Lang.settingsFindAndConvertDesc,
       cls: 'setting-item-description'
     });
 
     // Find and Convert units settings
     new Setting(containerEl)
-      .setName('Длина (для поиска)')
-      .setDesc('Конвертировать единицы длины при поиске по документу')
+      .setName(this.plugin.Lang.unitLengthSearch)
+      .setDesc(this.plugin.Lang.unitLengthSearchDesc)
       .addToggle(toggle => toggle
         .setValue(this.plugin.settings.findAndConvertUnits.length)
         .onChange(async (value) => {
@@ -1175,8 +1258,8 @@ class BiblicalUnitsSettingTab extends PluginSettingTab {
         }));
 
     new Setting(containerEl)
-      .setName('Вес (для поиска)')
-      .setDesc('Конвертировать единицы веса при поиске по документу')
+      .setName(this.plugin.Lang.unitWeightSearch)
+      .setDesc(this.plugin.Lang.unitWeightSearchDesc)
       .addToggle(toggle => toggle
         .setValue(this.plugin.settings.findAndConvertUnits.weight)
         .onChange(async (value) => {
@@ -1185,8 +1268,8 @@ class BiblicalUnitsSettingTab extends PluginSettingTab {
         }));
 
     new Setting(containerEl)
-      .setName('Объём (для поиска)')
-      .setDesc('Конвертировать единицы объёма при поиске по документу')
+      .setName(this.plugin.Lang.unitVolumeSearch)
+      .setDesc(this.plugin.Lang.unitVolumeSearchDesc)
       .addToggle(toggle => toggle
         .setValue(this.plugin.settings.findAndConvertUnits.volume)
         .onChange(async (value) => {
@@ -1195,8 +1278,8 @@ class BiblicalUnitsSettingTab extends PluginSettingTab {
         }));
 
     new Setting(containerEl)
-      .setName('Время (для поиска)')
-      .setDesc('Конвертировать единицы времени при поиске по документу')
+      .setName(this.plugin.Lang.unitTimeSearch)
+      .setDesc(this.plugin.Lang.unitTimeSearchDesc)
       .addToggle(toggle => toggle
         .setValue(this.plugin.settings.findAndConvertUnits.time)
         .onChange(async (value) => {
@@ -1206,12 +1289,12 @@ class BiblicalUnitsSettingTab extends PluginSettingTab {
 
     // Find and Convert output format
     new Setting(containerEl)
-      .setName('Формат вывода (для поиска)')
-      .setDesc('Как отображать конвертированные значения при использовании "Найти и конвертировать"')
+      .setName(this.plugin.Lang.findAndConvertFormat)
+      .setDesc(this.plugin.Lang.findAndConvertFormatDesc)
       .addDropdown(dropdown => dropdown
-        .addOption('parentheses', 'В скобках: локоть (0.44 м)')
-        .addOption('replace', 'Заменить: 0.44 м')
-        .addOption('inline', 'Рядом: локоть = 0.44 м')
+        .addOption('parentheses', this.plugin.Lang.formatParentheses)
+        .addOption('replace', this.plugin.Lang.formatReplace)
+        .addOption('inline', this.plugin.Lang.formatInline)
         .setValue(this.plugin.settings.findAndConvertOutputFormat)
         .onChange(async (value) => {
           this.plugin.settings.findAndConvertOutputFormat = value;
@@ -1220,8 +1303,8 @@ class BiblicalUnitsSettingTab extends PluginSettingTab {
 
     // Find and Convert bold values
     new Setting(containerEl)
-      .setName('Жирный шрифт (для поиска)')
-      .setDesc('Выделять конвертированные значения жирным шрифтом при использовании "Найти и конвертировать"')
+      .setName(this.plugin.Lang.findAndConvertBold)
+      .setDesc(this.plugin.Lang.findAndConvertBoldDesc)
       .addToggle(toggle => toggle
         .setValue(this.plugin.settings.findAndConvertBoldValues)
         .onChange(async (value) => {
