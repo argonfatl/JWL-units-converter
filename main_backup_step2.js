@@ -730,9 +730,7 @@ const InterfaceStrings = {
     unitVolume: 'Объём',
     unitVolumeDesc: 'Конвертировать единицы объёма',
     unitTime: 'Время',
-    unitTimeDesc: 'Конвертировать единицы времени',
-    dailyWage: 'Дневная зарплата ($)',
-    dailyWageDesc: 'Сумма дневной зарплаты для расчёта денежного эквивалента'
+    unitTimeDesc: 'Конвертировать единицы времени'
   },
 
   English: {
@@ -793,9 +791,7 @@ const InterfaceStrings = {
     unitVolume: 'Volume',
     unitVolumeDesc: 'Convert volume units',
     unitTime: 'Time',
-    unitTimeDesc: 'Convert time units',
-    dailyWage: 'Daily Wage ($)',
-    dailyWageDesc: 'Daily wage amount for monetary equivalent calculation'
+    unitTimeDesc: 'Convert time units'
   },
 
   Spanish: {
@@ -857,9 +853,7 @@ const InterfaceStrings = {
     unitVolume: 'Volumen',
     unitVolumeDesc: 'Convertir unidades de volumen',
     unitTime: 'Tiempo',
-    unitTimeDesc: 'Convertir unidades de tiempo',
-    dailyWage: 'Salario Diario ($)',
-    dailyWageDesc: 'Monto del salario diario para calcular el equivalente monetario'
+    unitTimeDesc: 'Convertir unidades de tiempo'
   }
 };
 
@@ -1374,12 +1368,10 @@ class BiblicalUnitsConverterPlugin extends Plugin {
     if (this.settings.showMonetaryEquivalent && unitName && MONETARY_EQUIVALENTS[unitName]) {
       const monetary = MONETARY_EQUIVALENTS[unitName];
       const numValue = parseFloat(original.match(/\d+(?:[.,]\d+)?/)?.[0]?.replace(',', '.') || '1');
-      const totalWorkDays = numValue * monetary.workDays;
-      const dailyWage = this.settings.dailyWage;
-      const totalValue = Math.round(totalWorkDays * dailyWage);
-      const workDaysText = this.getWorkDaysText(totalWorkDays);
+      const totalValue = Math.round(numValue * monetary.modernValue);
+      const workDaysText = this.getWorkDaysText(numValue * monetary.workDays);
 
-      convertedPart += ` ≈ ${workDaysText} = $${dailyWage}×${totalWorkDays.toFixed(2)} ≈ ${totalValue.toLocaleString()} ${monetary.currency} (${monetary.metal})`;
+      convertedPart += ` ≈ ${workDaysText} ≈ ${totalValue.toLocaleString()} ${monetary.currency} (${monetary.metal})`;
     }
 
     switch (outputFormat) {
@@ -1551,21 +1543,6 @@ class BiblicalUnitsSettingTab extends PluginSettingTab {
         .onChange(async (value) => {
           this.plugin.settings.showMonetaryEquivalent = value;
           await this.plugin.saveSettings();
-        }));
-
-    // Daily wage setting
-    new Setting(containerEl)
-      .setName(this.plugin.Lang.dailyWage)
-      .setDesc(this.plugin.Lang.dailyWageDesc)
-      .addText(text => text
-        .setPlaceholder('50')
-        .setValue(String(this.plugin.settings.dailyWage))
-        .onChange(async (value) => {
-          const numValue = parseFloat(value);
-          if (!isNaN(numValue) && numValue > 0) {
-            this.plugin.settings.dailyWage = numValue;
-            await this.plugin.saveSettings();
-          }
         }));
 
     // Separator for Find and Convert settings

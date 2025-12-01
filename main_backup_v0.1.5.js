@@ -24,11 +24,12 @@ const DEFAULT_SETTINGS = {
   outputFormat: 'parentheses', // 'parentheses', 'replace', 'inline'
   showOriginal: true,
   precision: 2,
-  interfaceLang: 'Russian',
+  interfaceLang: 'English',
   boldConvertedValues: false, // Bold formatting for converted values
   findAndConvertOutputFormat: 'parentheses', // Separate output format for find and convert
   findAndConvertBoldValues: false, // Separate bold formatting for find and convert
-  showMonetaryEquivalent: false // Show modern monetary equivalent for ancient coins
+  showMonetaryEquivalent: false, // Show modern monetary equivalent for ancient coins
+  dailyWage: 50 // Daily wage in dollars for monetary calculations
 };
 
 // Biblical units of measurement and their modern equivalents
@@ -729,7 +730,9 @@ const InterfaceStrings = {
     unitVolume: 'Объём',
     unitVolumeDesc: 'Конвертировать единицы объёма',
     unitTime: 'Время',
-    unitTimeDesc: 'Конвертировать единицы времени'
+    unitTimeDesc: 'Конвертировать единицы времени',
+    dailyWage: 'Дневная зарплата ($)',
+    dailyWageDesc: 'Сумма дневной зарплаты для расчёта денежного эквивалента'
   },
 
   English: {
@@ -790,7 +793,9 @@ const InterfaceStrings = {
     unitVolume: 'Volume',
     unitVolumeDesc: 'Convert volume units',
     unitTime: 'Time',
-    unitTimeDesc: 'Convert time units'
+    unitTimeDesc: 'Convert time units',
+    dailyWage: 'Daily Wage ($)',
+    dailyWageDesc: 'Daily wage amount for monetary equivalent calculation'
   },
 
   Spanish: {
@@ -852,7 +857,9 @@ const InterfaceStrings = {
     unitVolume: 'Volumen',
     unitVolumeDesc: 'Convertir unidades de volumen',
     unitTime: 'Tiempo',
-    unitTimeDesc: 'Convertir unidades de tiempo'
+    unitTimeDesc: 'Convertir unidades de tiempo',
+    dailyWage: 'Salario Diario ($)',
+    dailyWageDesc: 'Monto del salario diario para calcular el equivalente monetario'
   }
 };
 
@@ -1367,10 +1374,12 @@ class BiblicalUnitsConverterPlugin extends Plugin {
     if (this.settings.showMonetaryEquivalent && unitName && MONETARY_EQUIVALENTS[unitName]) {
       const monetary = MONETARY_EQUIVALENTS[unitName];
       const numValue = parseFloat(original.match(/\d+(?:[.,]\d+)?/)?.[0]?.replace(',', '.') || '1');
-      const totalValue = Math.round(numValue * monetary.modernValue);
-      const workDaysText = this.getWorkDaysText(numValue * monetary.workDays);
+      const totalWorkDays = numValue * monetary.workDays;
+      const dailyWage = this.settings.dailyWage;
+      const totalValue = Math.round(totalWorkDays * dailyWage);
+      const workDaysText = this.getWorkDaysText(totalWorkDays);
 
-      convertedPart += ` ≈ ${workDaysText} ≈ ${totalValue.toLocaleString()} ${monetary.currency} (${monetary.metal})`;
+      convertedPart += ` ≈ ${workDaysText} = $${dailyWage}×${totalWorkDays.toFixed(2)} ≈ ${totalValue.toLocaleString()} ${monetary.currency} (${monetary.metal})`;
     }
 
     switch (outputFormat) {
@@ -1542,6 +1551,21 @@ class BiblicalUnitsSettingTab extends PluginSettingTab {
         .onChange(async (value) => {
           this.plugin.settings.showMonetaryEquivalent = value;
           await this.plugin.saveSettings();
+        }));
+
+    // Daily wage setting
+    new Setting(containerEl)
+      .setName(this.plugin.Lang.dailyWage)
+      .setDesc(this.plugin.Lang.dailyWageDesc)
+      .addText(text => text
+        .setPlaceholder('50')
+        .setValue(String(this.plugin.settings.dailyWage))
+        .onChange(async (value) => {
+          const numValue = parseFloat(value);
+          if (!isNaN(numValue) && numValue > 0) {
+            this.plugin.settings.dailyWage = numValue;
+            await this.plugin.saveSettings();
+          }
         }));
 
     // Separator for Find and Convert settings

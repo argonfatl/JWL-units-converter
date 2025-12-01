@@ -1374,12 +1374,10 @@ class BiblicalUnitsConverterPlugin extends Plugin {
     if (this.settings.showMonetaryEquivalent && unitName && MONETARY_EQUIVALENTS[unitName]) {
       const monetary = MONETARY_EQUIVALENTS[unitName];
       const numValue = parseFloat(original.match(/\d+(?:[.,]\d+)?/)?.[0]?.replace(',', '.') || '1');
-      const totalWorkDays = numValue * monetary.workDays;
-      const dailyWage = this.settings.dailyWage;
-      const totalValue = Math.round(totalWorkDays * dailyWage);
-      const workDaysText = this.getWorkDaysText(totalWorkDays);
+      const totalValue = Math.round(numValue * monetary.modernValue);
+      const workDaysText = this.getWorkDaysText(numValue * monetary.workDays);
 
-      convertedPart += ` ≈ ${workDaysText} = $${dailyWage}×${totalWorkDays.toFixed(2)} ≈ ${totalValue.toLocaleString()} ${monetary.currency} (${monetary.metal})`;
+      convertedPart += ` ≈ ${workDaysText} ≈ ${totalValue.toLocaleString()} ${monetary.currency} (${monetary.metal})`;
     }
 
     switch (outputFormat) {
