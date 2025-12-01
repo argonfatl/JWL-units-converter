@@ -80,7 +80,7 @@ Biblical Units Converter helps Bible readers better understand ancient units of 
 Simply type biblical units in your notes and convert them:
 
 **Input:** `1 talent of silver`
-**Output:** `1 talent of silver (34.20 kg ≈ 20 years salary ≈ 365,000 dollars (silver))`
+**Output:** `1 talent of silver (34.20 kg ≈ 20 years salary = $50×7300 ≈ 365,000 dollars (silver))`
 
 **Input:** `5 cubits`
 **Output:** `5 cubits (2.22 m)`
@@ -141,9 +141,10 @@ Convert Hebrew month names to get detailed information:
 
 ### Monetary Equivalents
 When enabled, ancient coins show modern economic value:
-- Based on historical daily wages
+- **Customizable daily wage** - set your own daily wage for calculations
+- **Transparent formula** - shows calculation: `$50×7300 = $365,000`
+- Based on historical daily wages (work days equivalent)
 - Accounts for silver/gold content
-- Shows work days and modern currency equivalent
 - Multilingual formatting
 
 ## 📊 Data Sources
@@ -157,13 +158,13 @@ All conversion data is based on:
 ## 🌍 Multilingual Examples
 
 ### Russian
-`1 талант (34.20 кг ≈ 20 лет зарплаты ≈ 365,000 долларов (серебро))`
+`1 талант (34.20 кг ≈ 20 лет зарплаты = $50×7300 ≈ 365,000 долларов (серебро))`
 
 ### English  
-`1 talent (34.20 kg ≈ 20 years salary ≈ 365,000 dollars (silver))`
+`1 talent (34.20 kg ≈ 20 years salary = $50×7300 ≈ 365,000 dollars (silver))`
 
 ### Spanish
-`1 talento (34.20 kg ≈ 20 años de salario ≈ 365,000 dólares (plata))`
+`1 talento (34.20 kg ≈ 20 años de salario = $50×7300 ≈ 365,000 dólares (plata))`
 
 ## 🔧 Technical Details
 
