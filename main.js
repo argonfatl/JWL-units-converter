@@ -619,10 +619,19 @@ class BiblicalUnitsConverterPlugin extends Plugin {
 
   async loadSettings() {
     this.settings = Object.assign({}, DEFAULT_SETTINGS, await this.loadData());
+    this.updateLanguage();
   }
 
   async saveSettings() {
     await this.saveData(this.settings);
+    this.updateLanguage();
+  }
+
+  // Update interface language
+  updateLanguage() {
+    this.Lang = InterfaceStrings[this.settings.interfaceLang] || InterfaceStrings.Russian;
+    // Rebuild context menu with new language
+    this.menu = this.buildMenu();
   }
 
   // Build context menu
@@ -1042,6 +1051,7 @@ class BiblicalUnitsSettingTab extends PluginSettingTab {
         .onChange(async (value) => {
           this.plugin.settings.interfaceLang = value;
           this.plugin.Lang = InterfaceStrings[value] || InterfaceStrings.Russian;
+          this.plugin.menu = this.plugin.buildMenu(); // Rebuild menu with new language
           await this.plugin.saveSettings();
           // Refresh the settings display
           this.display();
